@@ -32,7 +32,7 @@ const objToSql = (ob) => {
 // Object for all our SQL statement functions
 const orm = {
   all(tableInput, cb) {
-    const queryString = `SELECT * FROM ${tableInput};`;
+    var queryString = `SELECT * FROM ${tableInput};`;
     connection.query(queryString, (err, result) => {
       if (err) {
         throw err;
@@ -41,7 +41,7 @@ const orm = {
     });
   },
   create(table, cols, vals, cb) {
-    let queryString = `INSERT INTO ${table}`;
+    var queryString = `INSERT INTO ${table}`;
     queryString += ' (';
     queryString += cols.toString();
     queryString += ') ';
@@ -58,7 +58,7 @@ const orm = {
     });
   },
   update(table, objColVals, condition, cb) {
-    let queryString = `UPDATE ${table}`;
+    var queryString = `UPDATE ${table}`;
     queryString += ' SET ';
     queryString += objToSql(objColVals);
     queryString += ' WHERE ';
@@ -72,7 +72,7 @@ const orm = {
     });
   },
   delete(table, condition, cb) {
-    let queryString = `DELETE FROM ${table}`;
+    var queryString = `DELETE FROM ${table}`;
     queryString += ' WHERE ';
     queryString += condition;
     connection.query(queryString, (err, result) => {
