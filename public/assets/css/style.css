@@ -77,6 +77,7 @@ h2 {
 
 .devoured-burgers {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 #devoured-burger-list {
