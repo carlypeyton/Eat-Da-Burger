@@ -9,7 +9,7 @@ const app = express();
 
 //Set Routes and Data Parsing
 app.use(routes);
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
