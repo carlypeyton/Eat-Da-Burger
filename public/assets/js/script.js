@@ -3,6 +3,8 @@ $(function () {
     $("#devour-button").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id");
+        console.log(id);
+        //Change condition to devoured
         var devoured = {
             devoured: 1
         };
@@ -20,6 +22,7 @@ $(function () {
     $("#delete-button").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id");
+        console.log(id);
         // Send the DELETE request
         $.ajax({
             type: "DELETE",
