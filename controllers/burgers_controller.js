@@ -14,10 +14,11 @@ router.get("/", function (req, res) {
   });
 });
 
-//Post new burger
+// Post new burger
 router.post('/api/burgers', (req, res) => {
   burger.create(['burger_name', 'devoured'], [req.body.burger_name, req.body.devoured], (result) => {
     res.json({ id: result.insertId });
+    console.log("Burger post sucessful.");
   });
 });
 
