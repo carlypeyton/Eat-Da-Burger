@@ -1,8 +1,8 @@
-# Eat-Da-Burgers
+# Eat-Da-Burger
 
 ## Project Description
 
-This node.js restaurant application allows users to keep track of a tasty burger menu.
+This node.js restaurant application allows users to keep track of a tasty burger menu. Add your favorite burgers and devour them!
 
 <img src = "public/assets/img/Eat-Da-Burger.png">
 
